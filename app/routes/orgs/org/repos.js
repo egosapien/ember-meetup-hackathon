@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('organization');
+    let org = this.modelFor('orgs.org');
+    return org.get('repositories');
   }
 });
