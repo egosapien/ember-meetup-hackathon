@@ -7,5 +7,6 @@ export default Model.extend({
   body: attr('string'),
   locked: attr('boolean'),
   state: attr('string'),
-  repository: DS.belongsTo('repository')
+  repository: DS.belongsTo('repository'),
+  comments: DS.hasMany('comments')
 });

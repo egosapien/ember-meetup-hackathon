@@ -1,8 +1,5 @@
 {{#md-collection content=model as |pull|}}
-  <div class="collection-item">
+  {{#link-to "orgs.org.repo.pull" pull.repository.organization.id pull.repository.id pull.id class="collection-item"}}
     <span class="title truncate">{{pull.title}}</span>
-    {{#link-to "orgs.org.repo.pulls.comments" pull.repository.organization.id pull.repository.id class="secondary-content"}}
-      <i class="material-icons">comment</i>
-    {{/link-to}}
-  </div>
+  {{/link-to}}
 {{/md-collection}}

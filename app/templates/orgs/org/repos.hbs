@@ -1,5 +1,3 @@
-
-
 <span class="card-title">{{model.org.name}}</span>
 {{#md-collection content=model.repos as |repo|}}
   {{#link-to 'orgs.org.repo' repo.organization.id repo.id class='collection-item'}}

@@ -10,7 +10,8 @@ Router.map(function() {
     this.route('org', {path: ':orgId'}, function() {
       this.route('repos', {path: 'repos'});
       this.route('repo', {path: "repo/:repoId"}, function() {
-        this.route('pulls', function() {
+        this.route('pulls');
+        this.route('pull', {path: 'pull/:pullId'}, function() {
           this.route('comments');
         });
       });

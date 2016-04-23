@@ -11,6 +11,8 @@
           {{#bread-crumbs linkable=true as |component route|}}
               {{#if (eq route.path 'orgs.org')}}
                 {{link-to route.title 'orgs.org.repos' class='breadcrumb'}}
+              {{else if (eq route.path 'orgs.org.repo.pull')}}
+                {{link-to route.title 'orgs.org.repo.pulls' class='breadcrumb'}}
               {{else}}
                 {{link-to route.title route.path class='breadcrumb'}}
               {{/if}}
