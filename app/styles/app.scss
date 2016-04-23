@@ -1,2 +1,10 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+body {
+  @extend .blue, .lighten-2;
+}
+
+a {
+  @extend .blue-text, .text-lighten-2;
+}

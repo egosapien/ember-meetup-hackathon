@@ -1,9 +1,0 @@
-<h4>Projects</h4>
-<br />
-{{#each model as |repo|}}
-<div>
-{{#link-to 'orgs.org.repo' repo.organization.id repo.id}}
-  {{repo.name}}
-{{/link-to}}
-</div>
-{{/each}}
