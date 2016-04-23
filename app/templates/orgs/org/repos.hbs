@@ -1,6 +1,9 @@
 
 
 <span class="card-title">{{model.org.name}}</span>
-  {{#md-collection content=model.repos as |repo|}}
-    {{link-to repo.name 'orgs.org.repo' repo.organization.id repo.id class='collection-item'}}
-  {{/md-collection}}
+{{#md-collection content=model.repos as |repo|}}
+  {{#link-to 'orgs.org.repo' repo.organization.id repo.id class='collection-item'}}
+    <span class="title">{{repo.name}}</span>
+    <p class="truncate">{{repo.description}}</p>
+  {{/link-to}}
+{{/md-collection}}

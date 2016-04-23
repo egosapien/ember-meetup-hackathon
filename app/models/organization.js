@@ -4,5 +4,6 @@ import DS from 'ember-data';
 
 export default Model.extend({
   name: attr("string"),
+  iconUrl: attr("string"),
   repositories: DS.hasMany({ async: true })
 });

@@ -1,7 +1,11 @@
 {{#md-card title='Organizations'}}
   {{#md-card-content}}
     {{#md-collection content=model as |org|}}
-      {{link-to org.name 'orgs.org.repos' org.id class='collection-item'}}
+
+      {{#link-to "orgs.org.repos" org.id class="collection-item avatar"}}
+        <img src={{org.iconUrl}} alt={{org.name}} class="circle" />
+        {{org.name}}
+      {{/link-to}}
     {{/md-collection}}
   {{/md-card-content}}
 {{/md-card}}

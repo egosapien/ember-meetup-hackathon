@@ -14,4 +14,7 @@ main {
 
 .collection a {
   @extend .blue-text, .text-lighten-2;
+  p {
+    color: grey !important;
+  }
 }

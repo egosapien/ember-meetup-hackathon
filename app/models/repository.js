@@ -6,5 +6,8 @@ export default Model.extend({
   name: attr('string'),
   description: attr('string'),
   homepage: attr('string'),
-  organization: DS.belongsTo('organization')
+  stargazersCount: attr('number'),
+  watchersCount: attr('number'),
+  organization: DS.belongsTo('organization'),
+  pulls: DS.hasMany('pulls')
 });
